@@ -1,10 +1,12 @@
 [package]
-name = "unsigned-varint"
+name = "uvint"
 version = "0.6.0"
 authors = ["Parity Technologies <admin@parity.io>"]
 license = "MIT"
-description = "unsigned varint encoding"
-repository = "https://github.com/paritytech/unsigned-varint"
+description = "uvint - unsigned varint encoding"
+repository = "https://github.com/tetcoin/uvint"
+homepage = "https://github.com/tetcoin/uvint"
+documentation = "https://docs.rs/uvint"
 readme = "README.md"
 edition = "2018"
 

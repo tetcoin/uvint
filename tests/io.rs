@@ -18,12 +18,12 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 use quickcheck::{Arbitrary, Gen};
-use unsigned_varint::encode;
+use uvint::encode;
 
 #[cfg(feature = "std")]
 #[test]
 fn read_arbitrary() {
-    use unsigned_varint::io;
+    use uvint::io;
 
     fn property(n: RandomUvi) {
         let mut r = std::io::Cursor::new(n.bytes());
@@ -42,7 +42,7 @@ fn read_arbitrary() {
 #[cfg(feature = "futures")]
 #[test]
 fn async_read_arbitrary() {
-    use unsigned_varint::aio;
+    use uvint::aio;
 
     fn property(n: RandomUvi) {
         futures_executor::block_on(async move {
@@ -63,7 +63,7 @@ fn async_read_arbitrary() {
 #[cfg(feature = "nom")]
 #[test]
 fn nom_read_arbitrary() {
-    use unsigned_varint::nom;
+    use uvint::nom;
 
     fn property(n: RandomUvi) {
         let input = n.bytes();

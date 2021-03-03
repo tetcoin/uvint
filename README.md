@@ -1,5 +1,5 @@
-unsigned-varint encoding
-========================
+uvint - unsigned-varint encoding
+================================
 
 Unsigned varint encodes unsigned integers in 7-bit groups. The most
 significant bit (MSB) in each byte indicates if another byte follows

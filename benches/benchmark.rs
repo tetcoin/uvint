@@ -19,7 +19,7 @@
 
 use criterion::{criterion_group, criterion_main, Criterion};
 use std::u64;
-use unsigned_varint::{decode, encode};
+use uvint::{decode, encode};
 
 fn bench_decode(c: &mut Criterion) {
     let mut buf = [0; 10];
@@ -41,7 +41,7 @@ fn bench_encode(c: &mut Criterion) {
 fn bench_codec(c: &mut Criterion) {
     use bytes::{Bytes, BytesMut};
     use tokio_util::codec::{Decoder, Encoder};
-    use unsigned_varint::codec::UviBytes;
+    use uvint::codec::UviBytes;
 
     let data = Bytes::from(vec![1; 8192]);
     let mut bytes = BytesMut::with_capacity(9000);

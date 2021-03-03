@@ -31,7 +31,7 @@ only includes `futures-io` and `futures-util` as dependencies (#26).
 
 # 0.3.1 [2020-02-17]
 
-- Add modules `io` and `aio` to support direct reading of an unsigned-varint
+- Add modules `io` and `aio` to support direct reading of an uvint
   value from a `std::io::Read` or `futures::io::AsyncRead` type.
 
 # 0.3.0 [2020-01-02]

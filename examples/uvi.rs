@@ -1,8 +1,8 @@
 extern crate hex;
-extern crate unsigned_varint;
+extern crate uvint;
 
 use std::{env, process};
-use unsigned_varint::{decode, encode};
+use uvint::{decode, encode};
 
 pub fn main() {
     let mut args = env::args().skip(1);

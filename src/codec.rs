@@ -23,7 +23,7 @@ use bytes::{Buf, BufMut, Bytes, BytesMut};
 use crate::{encode, decode::{self, Error}};
 use std::{io, marker::PhantomData, usize};
 
-/// Encoder/Decoder of unsigned-varint values
+/// Encoder/Decoder of uvint values
 #[derive(Default)]
 pub struct Uvi<T>(PhantomData<T>);
 
@@ -97,7 +97,7 @@ encoder_decoder_impls!(u64, u64_buffer);
 encoder_decoder_impls!(u128, u128_buffer);
 encoder_decoder_impls!(usize, usize_buffer);
 
-/// Encoder/Decoder of unsigned-varint, length-prefixed bytes
+/// Encoder/Decoder of uvint, length-prefixed bytes
 pub struct UviBytes<T = Bytes> {
     /// the variable-length integer encoder/decoder
     varint_codec: Uvi<usize>,

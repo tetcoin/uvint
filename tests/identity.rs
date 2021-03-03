@@ -19,7 +19,7 @@
 
 use quickcheck::QuickCheck;
 use std::{u8, u16, u32, u64, u128};
-use unsigned_varint::{decode::{self, Error}, encode};
+use uvint::{decode::{self, Error}, encode};
 
 #[test]
 fn identity_u8() {
@@ -107,7 +107,7 @@ fn identity_codec() {
     use bytes::{Bytes, BytesMut};
     use quickcheck::Gen;
     use tokio_util::codec::{Encoder, Decoder};
-    use unsigned_varint::codec::UviBytes;
+    use uvint::codec::UviBytes;
 
     fn prop(mut xs: Vec<u8>) -> bool {
         let mut codec = UviBytes::default();
